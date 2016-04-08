@@ -234,3 +234,5 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/getting_started/getting_started/.Rhistory
+/.gitattributes
