@@ -138,7 +138,14 @@ summarise(n_less = n(), n_dest = n_distinct(Dest), min_dist = min(Distance), max
 # Finish the command with a filter() and summarise() call
 hflights %>%
 mutate(RealTime = ActualElapsedTime + 100, mph = Distance / RealTime * 60) %>%
-filter(mph < 105, Cancelled == 1 | Diverted == 1) %>%
+filter(mph < 105 | Cancelled == 1 | Diverted == 1) %>%
 summarise(n_non = n(), n_dest = n_distinct(Dest), min_dist = min(Distance), max_dist = max(Distance))
 
 
+hflights %>%
+  mutate(RealTime = ActualElapsedTime + 100, mph = Distance / RealTime * 60) %>%
+  filter(mph < 105 | Cancelled == 1 | Diverted == 1) %>%
+  summarise(n_non = n(),
+            n_dest = n_distinct(Dest),
+            min_dist = min(Distance),
+            max_dist = max(Distance))
