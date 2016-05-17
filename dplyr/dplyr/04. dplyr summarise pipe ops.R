@@ -1,7 +1,7 @@
 #--------------------------------------------------------------------------------
 #  summarise(df, var = <agg.expr>, var = <agg. expr>)
 #  summarise(df, sum = sum(A), avg = mean(B), var = var(B))
-# agg.expr =    min, mean max, sum, var, sd, length, median, 
+# agg.expr =    min, mean, max, sum, var, sd, length, median, 
 #               first, last, nth, n, n_distinct
 #--------------------------------------------------------------------------------
 library(dplyr)
@@ -149,3 +149,17 @@ hflights %>%
             n_dest = n_distinct(Dest),
             min_dist = min(Distance),
             max_dist = max(Distance))
+
+
+
+#--------------------------------------------------------------------------------
+# Let's use hflights to answer another question: How many flights where overnight flights?
+# filter() the hflights tbl to keep only observations whose DepTime is not NA, whose ArrTime is not NA and for which DepTime exceeds ArrTime.
+# Pipe the result into a summarise() call to create a single summary variable:num, that simply counts the number of observations.
+#--------------------------------------------------------------------------------
+# Count the number of overnight flights
+
+hflights %>%
+filter(!is.na(DepTime) & !is.na(ArrTime) & DepTime > ArrTime) %>%
+summarise(num = n())
+
