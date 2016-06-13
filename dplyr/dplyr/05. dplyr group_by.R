@@ -53,17 +53,17 @@ arrange(rank)
 #--------------------------------------------------------------------------------
 # How many airplanes only flew to one destination from Houston? adv1
 hflights %>%
-  group_by() %>%
-  summarise() %>%
-  filter() %>%
-  summarise()
+  group_by(TailNum) %>%
+  summarise(ndest = n_distinct(Dest)) %>%
+  filter(ndest == 1) %>%
+  summarise(nplanes = n())
 
-# Find the most visited destination for each carrier: adv2
-hflights %>%
-  group_by() %>%
-  summarise() %>%
-  mutate() %>%
-  filter()
+  # Find the most visited destination for each carrier: adv2
+  hflights %>%
+    group_by(UniqueCarrier, Dest) %>%
+    summarise(n = n()) %>%
+    mutate(rank = rank(desc(n))) %>%
+    filter(rank == 1)
 
 
 
