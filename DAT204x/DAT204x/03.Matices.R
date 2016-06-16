@@ -175,3 +175,68 @@ view_count_loud <- view_count_all[, c(F, F, T, F, F, T, T, F)]
 
 # Use colSums() to calculate the number of views: total_views_loud
 total_views_loud <- colSums(view_count_loud)
+
+
+
+
+#--------------------------------------------------------------------------------------------- 
+
+# Star Wars box office in millions (!)
+new_hope <- c(460.998, 314.4)
+empire_strikes <- c(290.475, 247.900)
+return_jedi <- c(309.306, 165.8)
+star_wars_matrix <- rbind(new_hope, empire_strikes, return_jedi)
+colnames(star_wars_matrix) <- c("US", "non-US")
+rownames(star_wars_matrix) <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
+
+# Estimation of visitors
+# Assume that the price of a ticket was 5 dollars. Box office numbers divided by the ticket price gives you the number of visitors.
+visitors <- star_wars_matrix/5
+
+
+# Print the estimate to the console
+visitors
+
+#--------------------------------------------------------------------------------------------- 
+
+# Star Wars box office in millions (!)
+box_office_all <- c(461, 314.4, 290.5, 247.9, 309.3, 165.8)
+movie_names <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
+col_titles <- c("US", "non-US")
+star_wars_matrix <- matrix(box_office_all, nrow = 3, byrow = TRUE, dimnames = list(movie_names, col_titles))
+
+# Definition of ticket_prices_matrix
+ticket_prices_matrix <- matrix(c(5, 5, 6, 6, 7, 7), nrow = 3, byrow = TRUE, dimnames = list(movie_names, col_titles))
+
+# Estimated number of visitors
+visitors <- star_wars_matrix / ticket_prices_matrix
+
+# Average number of US visitors
+average_us_visitors <- mean(star_wars_matrix[, "US"] / ticket_prices_matrix[, "US"])
+
+# Average number of non-US visitors
+average_non_us_visitors <- mean(star_wars_matrix[, "non-US"] / ticket_prices_matrix[, "non-US"])
+
+#--------------------------------------------------------------------------------------------- 
+# > star_wars_matrix
+# US non - US
+# A New Hope 461.0 314.4
+# The Empire Strikes Back 290.5 247.9
+# Return of the Jedi 309.3 165.8
+# > commission_rates
+# US non - US
+# A New Hope 0.25 0.28
+# The Empire Strikes Back 0.23 0.26
+# Return of the Jedi 0.20 0.21
+# > budget
+# A New Hope The Empire Strikes Back Return of the Jedi
+# 13.0 18.0 32.5
+
+# Calculate the money that remains after subtracting the commission: remaining
+remaining <- star_wars_matrix - (star_wars_matrix * commission_rates)
+
+# Calculate income per film: remaining_tot
+remaining_tot <- rowSums(remaining)
+
+# Calculate profit
+profit <- remaining_tot - budget
