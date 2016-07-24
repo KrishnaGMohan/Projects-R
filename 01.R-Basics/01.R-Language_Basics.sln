@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{DA7A21FA-8162-4350-AD77-A8D1B671F3ED}") = "getting_started", "getting_started\getting_started.rxproj", "{9FEEFE3F-3481-49B3-A0A7-3E30E9B788B0}"
+Project("{DA7A21FA-8162-4350-AD77-A8D1B671F3ED}") = "01.R-Language-Basics", "01.R-Basics\01.R-Language-Basics.rxproj", "{F4716420-A3FE-4B27-8C0F-083D1E08C275}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9FEEFE3F-3481-49B3-A0A7-3E30E9B788B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FEEFE3F-3481-49B3-A0A7-3E30E9B788B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FEEFE3F-3481-49B3-A0A7-3E30E9B788B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FEEFE3F-3481-49B3-A0A7-3E30E9B788B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4716420-A3FE-4B27-8C0F-083D1E08C275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4716420-A3FE-4B27-8C0F-083D1E08C275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4716420-A3FE-4B27-8C0F-083D1E08C275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4716420-A3FE-4B27-8C0F-083D1E08C275}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
