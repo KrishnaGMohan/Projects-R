@@ -34,3 +34,9 @@ rep(c(1, 2, 3), times = 3)
 rep(c(0, 1, 2), each = 3)
 rep(c(1, 2), c(2, 3))
 rep(c(1:3), length.out = 10)
+
+#------------------------------------
+# String operations
+#------------------------------------
+# substr(x, start pos, stop pos)# substring(text, first, last = 1000000L)# substr(x, start, stop) <- value# substring(text, first, last = 1000000L) <- value
+v <- c("Every cloud has a silver lining")substr(v, 7, 15)substring(v, 7)substring(v, 7, 24)v <- c("Every cloud has a silver lining")substr(v, 19, 26) <- c("golden")vv <- c("Every cloud has a silver lining")substr(v, 19, 26) <- c("platinum")vv <- c("Every cloud has a silver lining")substring(v, 19) <- c("golden")vv <- c("Every cloud has a silver lining")substring(v, 19) <- c("platinum")v
