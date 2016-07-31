@@ -1,4 +1,5 @@
 #------------------------------------
+# Demo 05: Vectors
 # Vectors
 #------------------------------------
 
@@ -16,6 +17,7 @@ Comp <- A > B
 Comp
 
 #------------------------------------
+# Demo 05: Vectors
 # Naming Vector elements
 #------------------------------------
 torTemps2013 = c(Q1 = -2.1, Q2 = 13.4, Q3 = 19.7, Q4 = 2.9)
@@ -26,6 +28,7 @@ names(torTemps2013) <- quarterNames
 torTemps2013
 
 #------------------------------------
+# Demo 05: Vectors
 # Vector Arithmetic
 #------------------------------------
 
@@ -43,6 +46,7 @@ x ^ 2
 sqrt(x)
 
 #------------------------------------
+# Demo 05: Vectors
 # Comparing Vectors
 #------------------------------------
 pi
@@ -55,6 +59,7 @@ v != w
 identical(v,w)
 
 #------------------------------------
+# Demo 05: Vectors
 # Selecting vector elements
 #------------------------------------
 
@@ -76,6 +81,7 @@ dailyRain[!is.na(dailyRain) & !is.null(dailyRain)]
 mean(dailyRain[!is.na(dailyRain) & !is.null(dailyRain)])
 
 #------------------------------------
+# Demo 05: Vectors
 # Selecting vector elements - using names
 #------------------------------------
 
