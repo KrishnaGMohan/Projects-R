@@ -11,7 +11,6 @@ emp.DOJ <- c(as.Date("2013-04-15"),
                 as.Date("2014-11-21"))
 emp.salary <- c(75000, 65000, 58000, 69000, 62000)
 
-
 empDF <- data.frame(emp.id, emp.fname, emp.dept, emp.DOJ, emp.salary)
 empDF
 
@@ -34,6 +33,8 @@ colnames(empDF) <- c(colnames(empDF)[1:5], "cityid")
 empDF
 
 #----------------------
+# Merging DataFrames by column
+
 city.id <- c(3, 2, 5, 4)
 city.name <- c("Ottawa", "Vancouver", "Calgary", "Toronto")
 cityDF <- data.frame(city.id, city.name)
@@ -43,5 +44,30 @@ cityDF
 
 empDF <- merge(empDF, cityDF, by = "cityid")
 empDF
+#------------------------------
+# Editing a Data Frame
 
 temp <- edit(empDF)
+empDF <- temp # If satisfied withe the changes
+
+#------------------------------
+empDF$fname
+empDF[2,6]
+empDF[3, "salary"]
+empDF[3:5, 2:4]
+empDF[substr(empDF$fname,1,1) == "Z", ]
+empDF[empDF$salary > 65000, c("fname", "dept", "salary")]
+aggregate(empDF$salary ~ empDF$city, empDF, sum)
+
+
+subset(empDF, select = c(fname), dept == "Marketing" & salary > 65000)
+subset(empDF, select = -c(cityid, empid, doj))
+
+ 
+# Removing NAs from a DataFrame
+empDF[4,"salary"] <- NA
+empDF[2, "salary"] <- NA
+empDF
+
+mean(empDF$salary)
+mean(na.omit(empDF$salary))
