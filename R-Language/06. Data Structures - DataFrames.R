@@ -1,5 +1,6 @@
 #------------------------------------
-# Demo 12: DataFrames
+# Demo 12: DataFrames: 
+# Creating a Data Frame
 #------------------------------------
 emp.id <- c(2501, 4672, 3520, 2119, 1874)
 emp.fname <- c("Joe", "Lynda", "Zarook", "Edwin", "Brian")
@@ -19,12 +20,15 @@ empDF
 
 str(empDF)
 
-# Adding a Row
+#------------------------------------
+# Demo 13: DataFrames: 
+# Adding Rows and Columns
+#------------------------------------
+#Adding a Row
 newEmp <- data.frame(7856, "Fiona", "Marketing", Sys.Date(), 62000)
 colnames(newEmp) <- colnames(empDF)
 empDF <- rbind(empDF, newEmp)
 empDF
-
 
 #Adding a Column
 emp.cityid <- c(3, 5, 2, 2, 4, 5)
@@ -32,8 +36,10 @@ empDF <- cbind(empDF, emp.cityid)
 colnames(empDF) <- c(colnames(empDF)[1:5], "cityid")
 empDF
 
-#----------------------
-# Merging DataFrames by column
+#------------------------------------
+# Demo 14: DataFrames: 
+# Merging DataFrames by common column
+#------------------------------------
 
 city.id <- c(3, 2, 5, 4)
 city.name <- c("Ottawa", "Vancouver", "Calgary", "Toronto")
@@ -44,13 +50,18 @@ cityDF
 
 empDF <- merge(empDF, cityDF, by = "cityid")
 empDF
+
 #------------------------------
 # Editing a Data Frame
-
 temp <- edit(empDF)
 empDF <- temp # If satisfied withe the changes
-
 #------------------------------
+
+#------------------------------------
+# Demo 15: DataFrames: 
+# Selecting elements
+#------------------------------------
+
 empDF$fname
 empDF[2,6]
 empDF[3, "salary"]
@@ -59,15 +70,23 @@ empDF[substr(empDF$fname,1,1) == "Z", ]
 empDF[empDF$salary > 65000, c("fname", "dept", "salary")]
 aggregate(empDF$salary ~ empDF$city, empDF, sum)
 
-
 subset(empDF, select = c(fname), dept == "Marketing" & salary > 65000)
 subset(empDF, select = -c(cityid, empid, doj))
 
- 
+#------------------------------------
+# Demo 16: DataFrames: 
 # Removing NAs from a DataFrame
+#------------------------------------
+#Prepraration
 empDF[4,"salary"] <- NA
 empDF[2, "salary"] <- NA
 empDF
 
+# Removal of NAs
 mean(empDF$salary)
 mean(na.omit(empDF$salary))
+
+
+
+ts1 <- ts(1:15, start = c(2015, 1), frequency = 4)
+str(ts1)
