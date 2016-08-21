@@ -1,5 +1,39 @@
 #------------------------------------
-# Demo 17: Control Structures
+# Demo 17: Control Structures - if / while
+#------------------------------------
+# Collatz conjecture
+x <- 27
+steps <- 0
+while (x > 1) {
+    if (x %% 2 == 1)
+        x <- 3 * x + 1
+    else
+        x <- x / 2
+    steps <-steps +1
+}
+steps
+
+#--------------------------
+# repeat
+#--------------------------
+
+x <- 27
+steps <- 0
+repeat {
+    if (x %% 2 == 1)
+        x <- 3 * x + 1
+    else
+        x <- x / 2
+
+    steps <- steps + 1
+    
+    if (x == 1)
+        break
+}
+steps
+
+#------------------------------------
+# Demo 18: Control Structures - for loop
 #------------------------------------
 # Preparation
 emp.id <- c(2501, 4672, 3520, 2119, 1874)
@@ -39,22 +73,19 @@ empDF
 # 29% on the next $59,612 of taxable income(on the portion of taxable income over $140,388 up to $200,000), +
 # 33% of taxable income over $200,000.
 #------------------------------------------------------------------
-itax <- rep(0, 6) # Creating an Income Tax vector
-ctr <- 1 # Counter for looping
-
-while (ctr <= 6) {
-    if (empDF$salary[ctr] < 45282)
-        itax[ctr] <- empDF$salary[ctr] * 15 / 100
-    else if (empDF$salary[ctr] < 90563)
-        itax[ctr] <- 6792 + (empDF$salary[ctr] - 45282) * 20.5 / 100
-    else if (empDF$salary[ctr] < 140388)
-        itax[ctr] <- 16075 + (empDF$salary[ctr] - 90563) * 26 / 100
-    else if (empDF$salary[ctr] < 200000)
-        itax[ctr] <- 29029 + (empDF$salary[ctr] - 140388) * 29 / 100
-    else 
-        itax[ctr] <- 46317 + (empDF$salary[ctr] - 200000) * 33 / 100
-
-    ctr <- ctr + 1 # increment counter
+fedtax <- rep(0, nrow(empDF)) # Creating an Federal Income Tax vector
+for (x in 1:nrow(empDF)) {
+    s <- empDF[x,]$salary
+    if (s < 45282)
+        fedtax[x] <- s * 15 / 100
+    else if (s < 90563)
+        fedtax[x] <- 6792 + (s - 45282) * 20.5 / 100
+    else if (s < 140388)
+        fedtax[x] <- 16075 + (s - 90563) * 26 / 100
+    else if (s < 200000)
+        fedtax[x] <- 29029 + (s - 140388) * 29 / 100
+    else
+        fedtax[x] <- 46317 + (s - 200000) * 33 / 100
 }
-
-itax # Display Income Tax vector
+empDF <- cbind(empDF, fedtax) # Add the fed tax column to the Data frame
+empDF
