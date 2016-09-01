@@ -31,5 +31,12 @@ for (i in 1:8) {
 
 (function(x) { 2 ^ x + 1 })(3)
 
+#-----------------------------------
+pow <- function(first, second) { return(first ^ second) }
+pow(first = 2, second = 3)
+pow(second = 3, first = 2)
+
+pow(f = 2, s = 3)
+pow(2, 3)
 
 

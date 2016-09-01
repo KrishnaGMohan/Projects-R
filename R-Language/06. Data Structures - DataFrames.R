@@ -87,6 +87,17 @@ mean(empDF$salary)
 mean(na.omit(empDF$salary))
 
 
+#------------------------------------
+# Demo 16a: DataFrames: 
+# Easier DataFrame operations
+#------------------------------------
+with(empDF, mean(salary))
+
+attach(empDF)
+mean(salary)
+aggregate(salary ~ city, empDF, sum)
+detach(empDF)
+
 
 ts1 <- ts(1:15, start = c(2015, 1), frequency = 4)
 str(ts1)
