@@ -40,3 +40,24 @@ pow(f = 2, s = 3)
 pow(2, 3)
 
 
+#------------------------------------
+# Demo 19: apply Functions
+#------------------------------------
+
+cities <- c("Toronto","Vancouver", "Calgary", "Edmonton", "Winnipeg")
+unlist(lapply(cities, nchar))
+
+# Lets gets the average temperatures in Toronto for 2015
+# Ref: http://toronto.weatherstats.ca/charts/temperature-5years.html
+# Notice that the temperatures are in Celcius
+# To convert we write a function CelciusToFarenheit and apply it to all values in torTemps2015
+
+torTemps2015 = c(-7.2, 13.9, 20.7, 6.9)
+quarterNames = c("Q1", "Q2", "Q3", "Q4")
+names(torTemps2015) <- quarterNames
+
+CelciusToFarenheit <- function(x) {(x * 1.8) + 32 }
+
+torTemps2015inFarenheit <- unlist(lapply(torTemps2013, CelciusToFarenheit))
+torTemps2015inFarenheit
+
