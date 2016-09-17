@@ -41,7 +41,7 @@ pow(2, 3)
 
 
 #------------------------------------
-# Demo 19: apply Functions
+# Demo 20: apply Functions - lapply
 #------------------------------------
 
 cities <- c("Toronto","Vancouver", "Calgary", "Edmonton", "Winnipeg")
@@ -58,6 +58,49 @@ names(torTemps2015) <- quarterNames
 
 CelciusToFarenheit <- function(x) {(x * 1.8) + 32 }
 
-torTemps2015inFarenheit <- unlist(lapply(torTemps2013, CelciusToFarenheit))
+torTemps2015inFarenheit <- unlist(lapply(torTemps2015, CelciusToFarenheit))
 torTemps2015inFarenheit
 
+# Anonymous functions
+torTemps2015 = c(-7.2, 13.9, 20.7, 6.9)
+quarterNames = c("Q1", "Q2", "Q3", "Q4")
+names(torTemps2015) <- quarterNames
+
+torTemps2015inFarenheit <- unlist(lapply(torTemps2015, 
+function(x) {
+    (x * 1.8) + 32
+}
+))
+torTemps2015inFarenheit
+
+# Multiple arguments
+convert <- function(x, s) {
+    if (s == "F") {
+        return((x * 1.8) + 32)
+    }
+    else if (s == "C") {
+        return((x - 32) / 1.8)
+    }
+    else {
+        return(x)
+    }
+}
+
+torTemps2015 = c(-7.2, 13.9, 20.7, 6.9)
+quarterNames = c("Q1", "Q2", "Q3", "Q4")
+names(torTemps2015) <- quarterNames
+
+torTemps2015inFarenheit <- unlist(lapply(torTemps2015, convert, "F"))
+torTemps2015inFarenheit
+
+#------------------------------------
+# Demo 20: apply Functions - sapply
+#------------------------------------
+cities <- c("Toronto", "Vancouver", "Calgary", "Edmonton", "Winnipeg")
+sapply(cities, nchar)
+
+cities <- c("Toronto", "Vancouver", "Calgary", "Edmonton", "Winnipeg")
+sapply(cities, nchar, USE.NAMES = FALSE)
+
+
+sapply(list(runif(10), runif(10)), function(x) c(min = min(x), mean = mean(x), max = max(x)))
