@@ -66,14 +66,19 @@ torTemps2015 = c(-7.2, 13.9, 20.7, 6.9)
 quarterNames = c("Q1", "Q2", "Q3", "Q4")
 names(torTemps2015) <- quarterNames
 
-torTemps2015inFarenheit <- unlist(lapply(torTemps2015, 
-function(x) {
-    (x * 1.8) + 32
-}
+torTemps2015inFarenheit <- unlist(lapply(torTemps2015,
+    function(x) {
+        (x * 1.8) + 32
+    }
 ))
+
 torTemps2015inFarenheit
 
 # Multiple arguments
+# convert takes a value and a string “F” or “C” to indicate the conversion.
+#  If the string is “F” convert the value to Farenheit
+#  If the string is “C” convert the value to Celsius
+
 convert <- function(x, s) {
     if (s == "F") {
         return((x * 1.8) + 32)
@@ -94,13 +99,36 @@ torTemps2015inFarenheit <- unlist(lapply(torTemps2015, convert, "F"))
 torTemps2015inFarenheit
 
 #------------------------------------
-# Demo 20: apply Functions - sapply
+# Demo 21: apply Functions - sapply
 #------------------------------------
+
 cities <- c("Toronto", "Vancouver", "Calgary", "Edmonton", "Winnipeg")
 sapply(cities, nchar)
-
 cities <- c("Toronto", "Vancouver", "Calgary", "Edmonton", "Winnipeg")
 sapply(cities, nchar, USE.NAMES = FALSE)
 
+#----
+install.packages("gmp")
+library(gmp)
+factorize(73245)
 
-sapply(list(runif(10), runif(10)), function(x) c(min = min(x), mean = mean(x), max = max(x)))
+num <- c(65873, 37578, 74357, 75784)
+lapply(num, factorize)
+sapply(num, factorize)
+
+
+#------------------------------------
+# Demo 22: apply Functions - vapply
+#------------------------------------
+
+cities <- c("Toronto", "Vancouver", "Calgary", "Edmonton", "Winnipeg")
+vapply(cities, nchar, numeric(1))
+
+cities <- c("Toronto", "Vancouver", "Calgary", "Edmonton", "Winnipeg")
+vapply(cities, nchar, numeric(1), USE.NAMES = FALSE)
+
+# install.packages("gmp")
+# library(gmp)
+num <- c(65873, 37578, 74357, 75784)
+vapply(num, factorize, FUN.VALUE = numeric(28)) # Will result in an error
+

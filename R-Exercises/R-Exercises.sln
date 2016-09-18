@@ -1,11 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{DA7A21FA-8162-4350-AD77-A8D1B671F3ED}") = "R-Exercises", "R-Exercises\R-Exercises.rxproj", "{63EAFA55-02D4-41C6-9A05-81D3F68A6962}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63EAFA55-02D4-41C6-9A05-81D3F68A6962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63EAFA55-02D4-41C6-9A05-81D3F68A6962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63EAFA55-02D4-41C6-9A05-81D3F68A6962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63EAFA55-02D4-41C6-9A05-81D3F68A6962}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
