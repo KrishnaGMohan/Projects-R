@@ -70,3 +70,4 @@ hflights$CancellationCode <- lut[hflights$CancellationCode]
 
 # Glimpse at hflights
 glimpse(hflights)
+
