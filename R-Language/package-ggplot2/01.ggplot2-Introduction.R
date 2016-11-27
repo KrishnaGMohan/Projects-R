@@ -1,0 +1,16 @@
+# Load the ggplot2 package
+#install.packages("ggplot2")
+#install.packages("colorspace")
+library(ggplot2)
+
+# Explore the mtcars data frame with str()
+str(mtcars)
+
+# Execute the following command
+ggplot(mtcars, aes(x = cyl, y = mpg)) +
+geom_point()
+
+
+# Change the command below so that cyl is treated as factor
+ggplot(mtcars, aes(x = factor(cyl), y = mpg)) +
+  geom_point()
