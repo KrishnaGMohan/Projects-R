@@ -82,6 +82,7 @@ dat_xts <- as.xts(dat_zoo)
 #-------------------------------------------------------------------
 # Convert sunspots to xts using as.xts(). Save this as sunspots_xts
 sunspots_xts <- as.xts(sunspots)
+index(sunspots_xts)
 
 # Get the temporary file name
 tmp <- tempfile()
@@ -94,3 +95,5 @@ sun <- read.zoo(tmp, sep = ",", FUN = as.yearmon)
 
 # Convert sun into xts. Save this as sun_xts
 sun_xts <- as.xts(sun)
+
+
