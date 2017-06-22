@@ -1,0 +1,100 @@
+,CustomerID,Title,FirstName,MiddleName,LastName,Suffix,AddressLine1,AddressLine2,City,StateProvinceName,CountryRegionName,PostalCode,PhoneNumber,Education,Occupation,Gender,MaritalStatus,HomeOwnerFlag,NumberCarsOwned,NumberChildrenAtHome,TotalChildren,YearlyIncome
+1,21173,NULL,Chad,C,Yuan,NULL,7090 C. Mount Hood,NULL,Wollongong,New South Wales,Australia,2500,1 (11) 500 555-0115,Bachelors,Clerical,M,M,1,3,0,1,81916
+2,13249,NULL,Ryan,NULL,Perry,NULL,3651 Willow Lake Rd,NULL,Shawnee,British Columbia,Canada,V9B 2C3,787-555-0136,Partial College,Clerical,M,M,1,2,1,2,81076
+3,29350,NULL,Julia,NULL,Thompson,NULL,1774 Tice Valley Blvd.,NULL,West Covina,California,United States,91791,120-555-0111,Bachelors,Clerical,F,S,0,3,0,0,86387
+4,13503,NULL,Theodore,NULL,Gomez,NULL,2103 Baldwin Dr,NULL,Liverpool,England,United Kingdom,L4 4HB,1 (11) 500 555-0167,Partial College,Skilled Manual,M,M,1,2,1,2,61481
+5,22803,NULL,Marshall,J,Shan,NULL,Am Gallberg 234,NULL,Werne,Nordrhein-Westfalen,Germany,59368,1 (11) 500 555-0113,Partial College,Skilled Manual,M,S,1,1,0,0,51804
+6,22092,NULL,Andrea,NULL,Young,NULL,9384 Ashmount Way,NULL,Tacoma,Washington,United States,98403,639-555-0165,High School,Skilled Manual,F,M,1,2,2,2,61944
+7,11229,NULL,Adrian,C,Stewart,NULL,6898 Shaw Rd.,NULL,Redwood City,California,United States,94063,812-555-0122,Partial College,Manual,M,S,1,1,0,0,34919
+8,24179,NULL,Robyn,R,Blanco,NULL,6270 Pinecreek Way,NULL,Lavender Bay,New South Wales,Australia,2060,1 (11) 500 555-0113,Partial College,Skilled Manual,F,M,0,1,0,0,61832
+9,12127,NULL,Grace,NULL,Davis,NULL,"8188, rue Lamarck",NULL,Dunkerque,Nord,France,59140,1 (11) 500 555-0178,Partial College,Clerical,F,M,1,0,0,2,83834
+10,19903,NULL,Marcus,N,Nelson,NULL,"5, rue des Bouchers",NULL,Metz,Moselle,France,57000,1 (11) 500 555-0181,High School,Manual,M,S,0,1,0,0,26880
+11,25924,NULL,Hannah,NULL,Robinson,NULL,536 Beech Ct.,NULL,Redwood City,California,United States,94063,609-555-0161,Partial College,Clerical,F,S,0,1,0,0,77258
+12,23033,NULL,Alex,J,Turner,NULL,9973 Mcnutt Ave,NULL,Lakewood,California,United States,90712,668-555-0160,Bachelors,Management,M,M,1,3,0,0,102698
+13,20029,NULL,Jan,M,Evans,NULL,7787 Olive St.,NULL,Los Angeles,California,United States,90012,163-555-0164,Bachelors,Management,F,M,1,1,1,2,108198
+14,22031,NULL,Jorge,NULL,Cai,NULL,7952 Quartermaster,NULL,Wollongong,New South Wales,Australia,2500,1 (11) 500 555-0191,Bachelors,Professional,M,M,1,2,0,2,133762
+15,23770,NULL,Jamie,NULL,Carlson,NULL,8191 Scenic Ct.,NULL,Maidenhead,England,United Kingdom,SL67RJ,1 (11) 500 555-0165,Partial High School,Manual,M,S,0,1,0,0,30526
+16,23770,NULL,Jamie,NULL,Carlson,NULL,8191 Scenic Ct.,NULL,Maidenhead,England,United Kingdom,SL67RJ,1 (11) 500 555-0163,Partial High School,Manual,M,S,0,1,0,0,30526
+17,23737,NULL,Elena,NULL,Velez Amezaga,NULL,9613 Camino Royale,NULL,Beverly Hills,California,United States,90210,545-555-0171,Partial College,Skilled Manual,F,M,1,2,0,2,56353
+18,17127,NULL,Makayla,A,Gray,NULL,9442 Lacanda,NULL,Puyallup,Washington,United States,98371,133-555-0124,High School,Clerical,F,S,1,3,1,1,79019
+19,28130,NULL,Joshua,M,Taylor,NULL,1145 Paraiso Ct.,NULL,Langley,British Columbia,Canada,V3A 4R2,926-555-0140,Partial College,Skilled Manual,M,S,0,2,0,0,55387
+20,28455,NULL,Raymond,E,Sara,NULL,Zollstr 68,Verkaufsabteilung,Darmstadt,Hessen,Germany,64283,1 (11) 500 555-0165,Bachelors,Management,M,M,1,2,0,2,113276
+21,20161,NULL,Albert,G,Sanz,NULL,"87, rue de la Comédie",NULL,Orly,Val de Marne,France,94310,1 (11) 500 555-0118,Partial College,Management,M,S,1,1,0,1,109259
+22,21325,NULL,Angela,NULL,Hayes,NULL,8273 Glacier Drive,NULL,El Cajon,California,United States,92020,848-555-0112,High School,Clerical,F,M,1,0,0,2,83845
+23,12128,NULL,Kristy,E,Munoz,NULL,Altendorfer Straße 903,NULL,Berlin,Hessen,Germany,12171,1 (11) 500 555-0146,High School,Skilled Manual,F,M,1,0,2,2,59527
+24,23679,NULL,Jacob,G,Harris,NULL,7987 Seawind Dr.,NULL,Oak Bay,British Columbia,Canada,V8P,518-555-0167,Bachelors,Management,M,S,1,1,0,1,108360
+25,26799,NULL,Ryan,G,Russell,NULL,1104 O St.,NULL,Coronado,California,United States,92118,696-555-0187,Partial College,Clerical,M,M,0,1,0,0,87504
+26,15726,NULL,Faith,F,Barnes,NULL,6176 Crow Street,NULL,Hervey Bay,Queensland,Australia,4655,1 (11) 500 555-0195,Bachelors,Skilled Manual,F,M,0,0,0,0,55461
+27,15473,NULL,Abigail,NULL,Jenkins,NULL,4838 Second Street,NULL,Coronado,California,United States,92118,135-555-0132,Bachelors,Professional,F,S,1,2,0,0,137464
+28,28685,NULL,Marshall,J,Zhu,NULL,"24, boulevard Tremblay",NULL,Drancy,Seine Saint Denis,France,93700,1 (11) 500 555-0189,High School,Clerical,M,M,1,2,0,1,87676
+29,12302,NULL,Kevin,NULL,Coleman,NULL,Reiherweg 5,NULL,Frankfurt,Hessen,Germany,60323,1 (11) 500 555-0167,Bachelors,Management,M,M,1,3,0,2,104187
+30,23523,NULL,Steve,V,Liu,NULL,8358 Azalea Avenue,NULL,Findon,South Australia,Australia,5023,1 (11) 500 555-0135,Bachelors,Clerical,M,S,0,1,0,0,78222
+31,18713,NULL,Rosa,NULL,Yang,NULL,5673 Arlington Circle,NULL,Newcastle,New South Wales,Australia,2300,1 (11) 500 555-0178,Graduate Degree,Clerical,F,M,1,2,0,1,77383
+32,24082,NULL,Regina,A,Rodriguez,NULL,"56, avenue de l´Europe",NULL,Morangis,Essonne,France,91420,1 (11) 500 555-0119,High School,Skilled Manual,F,M,1,1,2,2,60700
+33,27886,NULL,Denise,P,Gonzalez,NULL,"80, avenue de Malakoff",NULL,Pantin,Seine Saint Denis,France,93500,1 (11) 500 555-0116,High School,Manual,F,S,0,0,0,0,30913
+34,21711,NULL,Hailey,J,Gray,NULL,44 Garcia,NULL,West Covina,California,United States,91791,643-555-0126,Partial College,Clerical,F,S,1,2,0,0,86952
+35,22366,NULL,Logan,C,Henderson,NULL,1695 Valley High Dr,NULL,Sooke,British Columbia,Canada,V0,154-555-0134,Graduate Degree,Skilled Manual,M,M,1,2,1,2,58567
+36,15010,NULL,Cory,J,Suri,NULL,9342 Temple Drive,NULL,Berkeley,California,United States,94704,109-555-0114,Partial College,Clerical,M,M,0,0,0,0,77478
+37,22296,NULL,Benjamin,M,Johnson,NULL,4137 Garcia Ranch Road,NULL,Lemon Grove,California,United States,91945,913-555-0137,Bachelors,Clerical,M,M,1,2,0,1,78406
+38,23237,NULL,Caleb,C,Young,NULL,Helsenbergbogen 2,NULL,Kassel,Hessen,Germany,34117,1 (11) 500 555-0192,Partial College,Clerical,M,S,0,1,0,0,85318
+39,13832,NULL,Priscilla,R,Raji,NULL,"51, rue Henri Gagnon",NULL,Courbevoie,Hauts de Seine,France,92400,1 (11) 500 555-0125,High School,Skilled Manual,F,S,0,0,0,0,52928
+40,26026,NULL,Cindy,E,Srini,NULL,9099 Warmcastle Ct.,NULL,Townsville,Queensland,Australia,4810,1 (11) 500 555-0153,Bachelors,Clerical,F,S,0,2,0,0,79224
+41,17813,NULL,Jay,K,Nicholls,NULL,2080 Mountain View Dr.,NULL,Woolston,England,United Kingdom,WA1 4SY,1 (11) 500 555-0187,Partial College,Manual,M,M,0,0,0,1,33076
+42,26369,NULL,Kate,J,Nath,NULL,"1101, rue Lauriston",NULL,Sèvres,Hauts de Seine,France,92310,1 (11) 500 555-0171,High School,Skilled Manual,F,M,1,1,0,2,56641
+43,18824,NULL,Elijah,L,Collins,NULL,2535 Park Lane,NULL,La Jolla,California,United States,92806,620-555-0143,High School,Manual,M,M,1,0,0,1,27203
+44,21064,NULL,Colleen,C,Sun,NULL,"8188, place du Tertre",NULL,Saint Ouen,Somme,France,80610,1 (11) 500 555-0116,High School,Clerical,F,S,0,3,0,0,77098
+45,28532,NULL,Tony,R,Xie,NULL,"4757, rue Saint-Lazare",NULL,Paris,Seine (Paris),France,75008,1 (11) 500 555-0112,Bachelors,Management,M,M,1,3,2,2,103200
+46,16183,NULL,Tanya,NULL,Carlson,NULL,9435 Vine Hill Way,NULL,St. Leonards,New South Wales,Australia,2065,1 (11) 500 555-0136,Bachelors,Skilled Manual,F,S,0,2,0,0,53784
+47,25700,NULL,Faith,B,Coleman,NULL,"2181, rue Malar",NULL,Saint-Denis,Seine Saint Denis,France,93400,1 (11) 500 555-0165,Partial College,Manual,F,S,0,1,0,0,25826
+48,21746,NULL,Xavier,NULL,Hernandez,NULL,144 Santa Monica,NULL,Lakewood,California,United States,90712,404-555-0118,High School,Manual,M,M,1,0,1,1,30925
+49,26560,NULL,Lindsey,NULL,Shen,NULL,589 Woodcrest Drive,NULL,Newcastle,New South Wales,Australia,2300,1 (11) 500 555-0163,Partial High School,Manual,F,M,1,1,1,2,30288
+50,16988,NULL,Brian,R,Bailey,NULL,9013 Ramsay Circle,NULL,Oakland,California,United States,94611,621-555-0190,Bachelors,Manual,M,S,0,0,0,0,34685
+51,18562,NULL,Mary,P,Wright,NULL,5745 St. Paul Way,NULL,Novato,California,United States,94947,160-555-0188,Graduate Degree,Skilled Manual,F,M,0,1,1,1,58213
+52,14996,NULL,Ross,R,Gill,NULL,Unter Linden 934,NULL,Berlin,Hamburg,Germany,10210,1 (11) 500 555-0114,Partial College,Management,M,S,0,0,0,0,108342
+53,26741,NULL,Nichole,J,Pal,NULL,2765 Robbins Place,NULL,Lane Cove,New South Wales,Australia,1597,1 (11) 500 555-0197,Bachelors,Professional,F,M,1,2,1,1,130385
+54,19490,NULL,Kristina,D,Smith,NULL,"11, rue de Cambrai",NULL,Paris,Seine (Paris),France,75019,1 (11) 500 555-0167,Partial College,Skilled Manual,F,S,0,2,0,0,58227
+55,12720,NULL,Nicolas,J,Chande,NULL,"44, rue du Départ",NULL,Suresnes,Hauts de Seine,France,92150,1 (11) 500 555-0115,Partial College,Skilled Manual,M,S,0,1,0,0,52156
+56,14050,NULL,Manuel,M,Lopez,NULL,2396 Ancona Ct.,NULL,Cloverdale,South Australia,Australia,6105,1 (11) 500 555-0146,Graduate Degree,Professional,M,S,1,2,0,0,131458
+57,11926,NULL,Eduardo,NULL,Foster,NULL,609 Power Ave.,NULL,Oregon City,Oregon,United States,97045,522-555-0169,Partial College,Manual,M,S,0,1,0,0,33510
+58,28023,NULL,Andrea,D,James,NULL,4645 Rossmor Parkway,NULL,Corvallis,Oregon,United States,97330,514-555-0198,High School,Skilled Manual,F,S,1,1,0,1,56785
+59,22541,NULL,Stefanie,NULL,Martinez,NULL,Im Himmelsweg 27,NULL,Paderborn,Hamburg,Germany,33041,1 (11) 500 555-0120,Partial College,Skilled Manual,F,S,0,1,0,0,58201
+60,23192,NULL,Emily,E,Garcia,NULL,8180 Loveridge Circle,NULL,Palo Alto,California,United States,94303,300-555-0120,Bachelors,Clerical,F,M,1,2,0,1,82359
+61,23192,NULL,Emily,E,Garcia,NULL,8180 Loveridge Circle,NULL,Palo Alto,California,United States,94303,300-555-0122,Bachelors,Clerical,F,M,1,2,0,1,82359
+62,24957,NULL,Anna,A,Howard,NULL,8290 Margaret Ct.,NULL,Lakewood,California,United States,90712,869-555-0119,Partial High School,Skilled Manual,F,M,1,2,1,2,55654
+63,11867,NULL,Nathaniel,C,James,NULL,4268 Weaver Court,NULL,National City,California,United States,91950,112-555-0116,High School,Manual,M,M,1,1,1,2,33167
+64,11929,NULL,Virginia,NULL,Gonzalez,NULL,7566 Keller Ridge Dr.,NULL,St. Leonards,New South Wales,Australia,2065,1 (11) 500 555-0188,Partial College,Management,F,S,1,3,0,1,107883
+65,27994,NULL,Jodi,L,Rai,NULL,5680 Camelback Ct.,NULL,Beaverton,Oregon,United States,97005,622-555-0178,High School,Clerical,F,M,1,1,2,2,80056
+66,21068,NULL,Lawrence,B,Jimenez,NULL,5097 Bourton Ct.,NULL,Bury,England,United Kingdom,PE17,1 (11) 500 555-0119,Partial High School,Skilled Manual,M,S,0,2,0,0,54577
+67,26332,NULL,Aaron,W,Mitchell,NULL,3773 Lakefield Place,NULL,Lebanon,Oregon,United States,97355,116-555-0185,Bachelors,Manual,M,M,0,0,1,1,36070
+68,20232,NULL,Franklin,L,Chande,NULL,867 Calico Way,NULL,Hobart,Tasmania,Australia,7001,1 (11) 500 555-0166,Bachelors,Skilled Manual,M,M,1,2,1,2,54049
+69,15029,NULL,Alejandro,W,Ye,NULL,5572 Running Springs Road,NULL,Wollongong,New South Wales,Australia,2500,1 (11) 500 555-0199,Partial College,Management,M,S,0,1,0,0,112726
+70,28907,NULL,Blake,NULL,Jenkins,NULL,1156 Dublin Court,NULL,Runcorn,England,United Kingdom,TY31,1 (11) 500 555-0111,Partial College,Manual,M,M,1,1,0,2,29749
+71,11887,NULL,Joseph,NULL,White,NULL,8656 Lakespring Place,NULL,Coronado,California,United States,92118,149-555-0116,Bachelors,Skilled Manual,M,M,1,2,2,2,56820
+72,16809,NULL,Bailey,A,Sanders,NULL,3910 Fawn Glen Circle,NULL,Redwood City,California,United States,94063,532-555-0181,Partial College,Management,F,S,1,3,0,0,102647
+73,18033,NULL,Evelyn,W,Patel,NULL,Postfach 44 11 11,NULL,Solingen,Nordrhein-Westfalen,Germany,42651,1 (11) 500 555-0193,Partial College,Clerical,F,S,0,2,0,0,82258
+74,27605,NULL,Miguel,NULL,Martinez,NULL,5656 Via Delaware,NULL,Sedro Woolley,Washington,United States,98284,455-555-0163,High School,Skilled Manual,M,M,1,1,2,2,54200
+75,14106,NULL,Melissa,NULL,Hughes,NULL,9391 80th St,NULL,Oakland,California,United States,94611,976-555-0182,Partial College,Skilled Manual,F,S,0,2,0,0,60908
+76,29293,NULL,Nuan,NULL,Wu,NULL,7717 Amador Valley Blvd.,NULL,Hawthorne,Queensland,Australia,4171,1 (11) 500 555-0113,Bachelors,Management,M,S,1,2,0,0,105007
+77,17669,NULL,Olivia,N,Rivera,NULL,8490 Longbrood Way,NULL,Sedro Woolley,Washington,United States,98284,196-555-0192,High School,Manual,F,M,1,0,1,1,32319
+78,23540,NULL,Bruce,NULL,Lopez,NULL,324 Mepham Dr.,NULL,Gold Coast,Queensland,Australia,4217,1 (11) 500 555-0119,Partial College,Skilled Manual,M,S,0,1,0,0,52311
+79,19710,NULL,Arianna,S,Gonzales,NULL,7886 Ruth Drive,NULL,Port Hammond,British Columbia,Canada,V6B 3P7,223-555-0195,Partial College,Clerical,F,S,1,2,0,0,82851
+80,21495,NULL,James,NULL,Hughes,NULL,8225 Hidden Oak Ct,NULL,Olympia,Washington,United States,98501,525-555-0165,High School,Manual,M,M,1,1,2,2,29111
+81,14773,NULL,Noah,NULL,Ross,NULL,"7, route de Marseille",NULL,Villeneuve-d'Ascq,Nord,France,59491,1 (11) 500 555-0136,Graduate Degree,Clerical,M,M,1,1,1,1,81985
+82,29082,NULL,Sabrina,L,Ramos,NULL,868 Aspen Dr.,NULL,Wollongong,New South Wales,Australia,2500,1 (11) 500 555-0143,Partial High School,Manual,F,S,1,0,0,0,33954
+83,14021,NULL,Michelle,NULL,Richardson,NULL,2676 Santa Fe Street,NULL,Kirkland,Washington,United States,98033,590-555-0195,Partial College,Manual,F,S,0,0,0,0,29016
+84,23689,NULL,Kayla,D,Hall,NULL,7034 Carson,NULL,West Covina,California,United States,91791,155-555-0190,High School,Manual,F,M,1,0,1,2,33152
+85,13485,NULL,Thomas,J,Allen,NULL,288 Almaden Dr.,NULL,Chula Vista,California,United States,91910,599-555-0119,Graduate Degree,Clerical,M,M,1,1,2,2,80331
+86,14179,NULL,Claudia,J,Xu,NULL,Lützowplatz 5538,NULL,Braunschweig,Nordrhein-Westfalen,Germany,38001,1 (11) 500 555-0140,Bachelors,Clerical,F,S,1,1,1,1,79235
+87,15084,NULL,Adrienne,NULL,Serrano,NULL,Winterfeldtstr 2529,NULL,Kassel,Hessen,Germany,34117,1 (11) 500 555-0186,Graduate Degree,Manual,F,S,0,1,0,0,35390
+88,27193,NULL,Daniel,V,Miller,NULL,6885 Auburn,NULL,Lincoln Acres,California,United States,91950,623-555-0156,Graduate Degree,Professional,M,S,0,3,0,0,136457
+89,20423,NULL,Alicia,H,Goel,NULL,7405 Jacqueline Drive,NULL,Wollongong,New South Wales,Australia,2500,1 (11) 500 555-0147,High School,Skilled Manual,F,S,1,1,0,0,53549
+90,18300,NULL,Diane,L,Ramos,NULL,3381 Paso Nogal,NULL,Cloverdale,South Australia,Australia,6105,1 (11) 500 555-0148,Partial College,Clerical,F,M,1,0,1,2,85674
+91,21781,NULL,Jared,NULL,Rivera,NULL,2096 Trinity Ave.,NULL,Lynnwood,Washington,United States,98036,432-555-0138,Bachelors,Professional,M,M,1,3,0,2,129242
+92,28780,NULL,Melissa,L,Griffin,NULL,1874 Orchid Ct,NULL,Seattle,Washington,United States,98104,844-555-0182,Partial High School,Skilled Manual,F,M,1,1,2,2,61829
+93,25162,NULL,Bryan,D,Morris,NULL,9634 S. Silver Spring,NULL,Torrance,California,United States,90505,729-555-0131,Bachelors,Management,M,S,1,3,0,0,111980
+94,26829,NULL,Morgan,NULL,Evans,NULL,Postfach 55 00 00,NULL,Bottrop,Nordrhein-Westfalen,Germany,46236,1 (11) 500 555-0110,Bachelors,Skilled Manual,F,M,1,0,1,1,54675
+95,26829,NULL,Morgan,NULL,Evans,NULL,Postfach 55 00 00,NULL,Bottrop,Nordrhein-Westfalen,Germany,46236,1 (11) 500 555-0119,Bachelors,Skilled Manual,F,M,1,0,1,1,54675
+96,11345,NULL,Robin,NULL,Ramos,NULL,"6, rue de l´Esplanade",NULL,Tremblay-en-France,Seine Saint Denis,France,93290,1 (11) 500 555-0111,Partial College,Management,F,S,1,3,0,0,106648
+97,22539,NULL,Randall,D,Sanz,NULL,3001 Mt. Etna,NULL,Woolston,England,United Kingdom,WA1 4SY,1 (11) 500 555-0177,Partial High School,Skilled Manual,M,S,0,1,0,0,58037
+98,26226,NULL,Michele,C,Andersen,NULL,Zimmerstr 57,NULL,München,Nordrhein-Westfalen,Germany,80074,1 (11) 500 555-0182,Partial College,Management,F,M,1,2,0,1,106062
+99,22654,NULL,Orlando,NULL,Romero,NULL,"8, rue de la Comédie",NULL,Colombes,Hauts de Seine,France,92700,1 (11) 500 555-0112,High School,Manual,M,S,0,1,0,0,28008

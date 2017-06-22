@@ -236,3 +236,6 @@ z_dup <- make.index.unique(z, drop = TRUE) # Drop duplicates
 
 # Round observations in z to the next time
 z_round <- align.time(z, n = 3600)
+
+
+?xts
