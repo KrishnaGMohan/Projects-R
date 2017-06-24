@@ -1,3 +1,4 @@
+install.packages("xts")
 library(xts)
 
 # Create the object data using 5 random numbers
@@ -121,3 +122,7 @@ tail(lastweek, 2)
 # Extract all but the last two days of lastweek
 first(lastweek, "-2 days")
 
+
+
+help(OlsonNames)
+Sys.getenv()

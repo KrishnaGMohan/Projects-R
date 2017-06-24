@@ -1,9 +1,10 @@
+install.packages("quantmod")
 library(quantmod)
 
 symbol <- "MSFT"
 fromDate <- as.Date("2011-01-01","%Y-%m-%d")
 toDate <- Sys.Date()
-fromSrc <- "yahoo"
+fromSrc <- "google"
 
 MSFT <- getSymbols(Symbols = symbol, from = fromDate, to = toDate, src = fromSrc, auto.assign = FALSE)
 tail(MSFT)
