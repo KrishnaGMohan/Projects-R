@@ -1,13 +1,24 @@
 install.packages("quantmod")
 library(quantmod)
 
-symbol <- "MSFT"
 fromDate <- as.Date("2011-01-01","%Y-%m-%d")
 toDate <- Sys.Date()
 fromSrc <- "google"
 
-MSFT <- getSymbols(Symbols = symbol, from = fromDate, to = toDate, src = fromSrc, auto.assign = FALSE)
-tail(MSFT)
+stocks <- c('MSFT', 'AMZN', 'RY', 'TD', 'FB', 'AAPL', 'GOOGL')
+
+
+FB <- getSymbols(Symbols = 'FB', from = fromDate, to = toDate, src = fromSrc, auto.assign = FALSE)
+TD <- getSymbols(Symbols = "TD", from = fromDate, to = toDate, src = fromSrc, auto.assign = FALSE)
+
+RYA <- adjustOHLC(RY, adjust = c("split", "dividend"))
+tail(FB)
+tail(RY)
+
+
+
+cor(RY, TD)
+
 rm(MSFT)
 
 #-----------------------------------------------------
@@ -85,3 +96,22 @@ periodicity(MSFT)
 #Quandl.api_key("Vnyv--827Kp8rDnVxBUd")
 #myData <- Quandl.datatable("WIKI/PRICES")
 #--------------------------------------------------------
+
+
+install.packages("PerformanceAnalytics")
+library(PerformanceAnalytics)
+
+
+getSymbols(Symbols = "TB3MS",
+            from = fromDate,
+            to = toDate,
+            src = "FRED",
+            auto.assign = TRUE)
+            ,
+env = rfrEnv)
+
+head(TB3MS)
+
+
+getSymbols("GOOGL", src = "yahoo")
+GOOGL["201404"]
