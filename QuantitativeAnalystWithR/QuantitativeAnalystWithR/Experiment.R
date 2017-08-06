@@ -115,3 +115,11 @@ head(TB3MS)
 
 getSymbols("GOOGL", src = "yahoo")
 GOOGL["201404"]
+
+
+
+#---------------------------------------------------------
+
+loan_data <- readRDS("D:/Personal/OneDrive/LEARNING/Quantitative Analyst with R/Importing and Managing Financial Data in R/CH 11. Credit Risk Modeling in R/loan_data_ch1.rds")
+
+head(loan_data,10)

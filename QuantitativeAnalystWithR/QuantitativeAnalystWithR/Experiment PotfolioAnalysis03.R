@@ -2,11 +2,20 @@
 # Load Libraries
 #----------------------------------------------------------------------
 # install.packages("tseries")
+# install.packages("ROI")
+# install.packages("ROI.plugin.quadprog")
+# install.packages("ROI.plugin.glpk")
+
 
 library(quantmod)
+library(ROI)
+library(ROI.plugin.quadprog)
+library(ROI.plugin.glpk)
 library(PerformanceAnalytics)
 library(PortfolioAnalytics)
 library(tseries)
+
+
 #----------------------------------------------------------------------
 # Setup environment
 #----------------------------------------------------------------------
@@ -81,6 +90,11 @@ rfr_returns <- rfr_returns / (365 * 100)
 rfr_returns_monthly <- rfr_returns_raw / (12 * 100)
 index(rfr_returns_monthly) <- as.yearmon(index(rfr_returns_monthly))
 
+
+
+
+
+
 #----------------------------------------------------------------------
 # Computing Annulatized Sharpe ratio
 #----------------------------------------------------------------------
@@ -150,20 +164,17 @@ for (ticker in tickers) {
 #----------------------------------------------------------------------
 # Portfolio optimization
 #----------------------------------------------------------------------
-# Load tseries
-library(tseries)
-
 # Calculate each stocks mean returns
 stockmu <- colMeans(asset_returns_monthly)
 
 # Create a grid of target values
-grid <- seq(from = 0.011895, to = max(stockmu), length.out = 50)
+grid <- seq(from = 0.011895, to = max(stockmu), length.out = 100)
 
 # Create empty vectors to store means and deviations
 vpm <- vpsd <- rep(NA, length(grid))
 
 # Create an empty matrix to store weights
-mweights <- matrix(NA, 50, ncol(asset_returns_monthly))
+mweights <- matrix(NA, length(grid), ncol(asset_returns_monthly))
 
 # Create your for loop
 for (i in 1:length(grid)) {
@@ -173,13 +184,69 @@ for (i in 1:length(grid)) {
     mweights[i,] <- opt$pw
 }
 
-plot(vpsd, vpm, type = "l", xlab = "Volatility (sd)", ylab = "Average Returns (means)" )
+#----------------------------------------------------------------------
+# Portfolio Otimum Weights - Minimum sd
+#----------------------------------------------------------------------
 paste("Minimum sd:", min(vpsd), sep =  " ")
 paste("Corresponding mean return:", vpm[which(vpsd %in% sort(vpsd)[1])], sep = " ")
 optweights <- mweights[which(vpsd %in% sort(vpsd)[1]),]
 names(optweights) <- tickers
 print("Optimum Weights")
 optweights
+plot(vpsd, vpm, type = "l", xlab = "Volatility (sd)", ylab = "Average Returns (means)")
+abline(h = vpm[which(vpsd %in% sort(vpsd)[1])], lty = 3)
+abline(v = min(vpsd), lty = 3)
+
+
+#----------------------------------------------------------------------
+# Portfolio Otimum Weights - Maximum Sharpe Ratio
+#----------------------------------------------------------------------
+vshrpe <- (vpm - mean(rfr_returns_monthly)) / vpsd
+paste("Maximum Sharpe Ratio:", max(vshrpe), sep = " ")
+paste("Corresponding mean return:", vpm[vshrpe == max(vshrpe)], sep = " ")
+paste("Corresponding sd:", vpsd[vshrpe == max(vshrpe)], sep = " ")
+optweights <- mweights[vshrpe == max(vshrpe),]
+names(optweights) <- tickers
+print("Optimum Weights")
+optweights
+plot(vpsd, vpm, type = "l", xlab = "Volatility (sd)", ylab = "Average Returns (means)")
+abline(a = mean(rfr_returns_monthly), b = max(vshrpe), lty = 3)
+abline(h = vpm[which(vshrpe %in% sort(vshrpe)[length(vshrpe)])], lty = 3)
+abline(v = vpsd[which(vshrpe %in% sort(vshrpe)[length(vshrpe)])], lty = 3)
+
+
+
+
+#----------------------------------------------------------------------
+# Portfolio optimization using PortfolipAnalytics
+#----------------------------------------------------------------------
+
+# Create the portfolio specification
+port_spec <- portfolio.spec(assets = tickers)
+
+# Add a full investment constraint such that the weights sum to 1
+port_spec <- add.constraint(portfolio = port_spec, type = "full_investment")
+
+# Add a long only constraint such that the weight of an asset is between 0 and 1
+port_spec <- add.constraint(portfolio = port_spec, type = "long_only")
+
+# Add an objective to maximize portfolio mean return
+port_spec <- add.objective(portfolio = port_spec, type = "return", name = "mean")
+
+# Add an objective to minimize portfolio variance
+port_spec <- add.objective(portfolio = port_spec, type = "risk", name = "var", risk_aversion = 10)
+
+# Solve the optimization problem
+opt <- optimize.portfolio(R = asset_returns_monthly, portfolio = port_spec, optimize_method = "ROI")
+
+# Print the results of the optimization
+print(opt)
+
+# Extract the optimal weights
+extractWeights(opt)
+
+# Chart the optimal weights
+chart.Weights(opt)
 
 
 
