@@ -117,3 +117,39 @@ conf_matrix <- table(test_set$loan_status, model_pred)
 
 # Compute sensitivity
 conf_matrix[2, 2] / (conf_matrix[2, 2] + conf_matrix[2, 1])
+
+
+#-------------------------------
+
+
+loan_data <- readRDS("D:/Personal/OneDrive/LEARNING/Quantitative Analyst with R/Importing and Managing Financial Data in R/CH 11. Credit Risk Modeling in R/loan_data_ch2.rds")
+
+head(loan_data, 10)
+training_set < loan_data
+
+# Build a glm model with variable ir_cat as a predictor
+log_model_cat <- glm(loan_status ~ ir_cat, family = "binomial", data = training_set)
+
+# Print the parameter estimates 
+log_model_cat
+
+# Look at the different categories in ir_cat using table()
+table(loan_data$ir_cat)
+
+log_model_cat
+log_model_cat$coefficients
+#-------------------------------------------------
+# Build the logistic regression model
+predictions_all_small <- predict(log_model_small, newdata = test_set, type = "response")
+
+# Look at the range of the object "predictions_all_small"
+range(predictions_all_small)
+
+# Change the code below to construct a logistic regression model using all available predictors in the data set
+log_model_full <- glm(loan_status ~ ., family = "binomial", data = training_set)
+
+# Make PD-predictions for all test set elements using the the full logistic regression model
+predictions_all_full <- predict(log_model_full, newdata = test_set, type = "response")
+
+# Look at the predictions range
+range(predictions_all_full)
